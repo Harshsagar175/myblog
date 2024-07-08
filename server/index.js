@@ -15,11 +15,7 @@ app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 
 // CORS configuration
-app.use(cors({
-    credentials: true, // Allow credentials
-    origin: 'http://localhost:3000', // Allow requests from this origin
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
-}));
+app.use(cors());
 
 // File upload middleware
 app.use(upload());
